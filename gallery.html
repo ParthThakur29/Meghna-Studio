@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meghna Studio — Gallery</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+  <div id="dot"></div>
+
+  <nav class="nav dark" id="nav">
+    <a class="nav-logo" href="home.html">
+      Meghna Studio
+      <span>Gujarat · Valoda · From 2000</span>
+    </a>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="gallery.html" class="here">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+
+    <!-- BANNER -->
+    <div class="gal-banner">
+      <div class="gal-banner-bg"></div>
+      <div class="gal-banner-overlay"></div>
+      <div class="gal-banner-text">
+        <span class="label">Portfolio</span>
+        <h1>The <em>Gallery</em></h1>
+        <p>Selected works from two decades of photography across Gujarat</p>
+      </div>
+    </div>
+
+    <!-- FILTER BAR removed — show all photos -->
+
+    <!-- PHOTO GRID -->
+    <div class="photo-grid">
+
+      <!-- Row 1: portrait + wide pre-wedding -->
+      <div class="photo-cell" data-cat="portrait" data-src="images/059A4309.JPG">
+        <img src="images/059A4309.JPG" alt="Portrait" style="object-position:center 25%;">
+        <div class="photo-cell-info"><span>Portrait</span></div>
+      </div>
+      <div class="photo-cell wide" data-cat="wedding" data-src="images/059A3951.JPG">
+        <img src="images/059A3951.JPG" alt="Pre-Wedding Couple" style="object-position:center center;">
+        <div class="photo-cell-info"><span>Pre-Wedding · Gujarat</span></div>
+      </div>
+
+      <!-- Row 2: wide haldi + mehndi hands -->
+      <div class="photo-cell wide" data-cat="wedding" data-src="images/AP__7736.JPG">
+        <img src="images/AP__7736.JPG" alt="Haldi Ceremony" style="object-position:center center;">
+        <div class="photo-cell-info"><span>Haldi Ceremony</span></div>
+      </div>
+      <div class="photo-cell" data-cat="wedding" data-src="images/059A4559.JPG">
+        <img src="images/059A4559.JPG" alt="Wedding Mehndi" style="object-position:center center;">
+        <div class="photo-cell-info"><span>Wedding · Mehndi</span></div>
+      </div>
+
+      <!-- Row 3: bridal portrait + baby shower -->
+      <div class="photo-cell" data-cat="portrait" data-src="images/059A4337.JPG">
+        <img src="images/059A4337.JPG" alt="Bridal Portrait" style="object-position:center 25%;">
+        <div class="photo-cell-info"><span>Bridal Portrait</span></div>
+      </div>
+      <div class="photo-cell wide" data-cat="event" data-src="images/059A3824.JPG">
+        <img src="images/059A3824.JPG" alt="Baby Shower Event" style="object-position:center 12%;">
+        <div class="photo-cell-info"><span>Baby Shower · Valoda</span></div>
+      </div>
+
+      <!-- Row 4: puja + ritual -->
+      <div class="photo-cell" data-cat="event" data-src="images/059A1727.JPG">
+        <img src="images/059A1727.JPG" alt="Puja Ceremony" style="object-position:center center;">
+        <div class="photo-cell-info"><span>Puja Ceremony</span></div>
+      </div>
+      <div class="photo-cell wide" data-cat="event" data-src="images/059A1725.JPG">
+        <img src="images/059A1725.JPG" alt="Ritual" style="object-position:center center;">
+        <div class="photo-cell-info"><span>Ritual · Gujarat</span></div>
+      </div>
+
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <button class="lb-close" id="lb-close">✕</button>
+      <button class="lb-prev"  id="lb-prev">&#8592;</button>
+      <button class="lb-next"  id="lb-next">&#8594;</button>
+      <img id="lb-img" src="" alt="">
+      <div class="lb-counter" id="lb-counter"></div>
+      <p class="lb-hint">← → arrow keys &nbsp;·&nbsp; Esc to close</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="logo">Meghna Studio</div>
+    <nav class="links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="copy">© 2025 Ketan Thakur · Valoda</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

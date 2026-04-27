@@ -1,0 +1,185 @@
+/*
+  about.css
+  Styles for the about page
+*/
+
+/* big cinematic header */
+.about-top {
+  height: 65vh;
+  min-height: 460px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.about-top-bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/059A4309.JPG') center 30% / cover;
+}
+
+.about-top-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(24,21,16,0.98) 0%, rgba(24,21,16,0.1) 65%);
+}
+
+.about-top-text {
+  position: relative;
+  z-index: 1;
+  padding: 4.5rem 5rem;
+}
+
+.about-top-text h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  color: #fff;
+  line-height: 1.06;
+}
+
+.about-top-text h1 em {
+  font-style: italic;
+  color: var(--gold-lt);
+}
+
+.about-top-text p {
+  font-size: 14.5px;
+  color: rgba(255,255,255,0.38);
+  margin-top: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+/* story section */
+.about-body {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.about-story {
+  background: var(--dark);
+  padding: 5.5rem 4.8rem;
+}
+
+.about-story h2 {
+  font-family: var(--serif);
+  font-size: 1.9rem;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 1.8rem;
+}
+
+.about-story h2 em {
+  font-style: italic;
+  color: var(--gold-lt);
+}
+
+.about-story p {
+  font-size: 14.5px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.44);
+  line-height: 1.95;
+  margin-bottom: 1.2rem;
+}
+
+.sign {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin-top: 2.5rem;
+  opacity: 0.8;
+}
+
+/* right side with stats and gear */
+.about-meta {
+  background: var(--off-white);
+  padding: 5.5rem 4rem;
+}
+
+.stat-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-bottom: 3rem;
+}
+
+.stat-box {
+  background: #fff;
+  padding: 2.2rem 1.6rem;
+  border: 1px solid rgba(200,162,106,0.1);
+  text-align: center;
+  transition: border-color 0.22s;
+}
+
+.stat-box:hover {
+  border-color: rgba(200,162,106,0.3);
+}
+
+.stat-box-n {
+  font-family: var(--serif);
+  font-size: 2.7rem;
+  color: var(--gold-dk);
+  line-height: 1;
+}
+
+.stat-box-l {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+
+/* gear tags */
+.gear-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 1rem;
+}
+
+.gear-tag {
+  padding: 6px 14px;
+  border: 1px solid rgba(200,162,106,0.2);
+  background: #fff;
+  font-size: 12px;
+  color: var(--muted);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.gear-tag:hover {
+  border-color: var(--gold);
+  color: var(--dark);
+}
+
+/* quote strip */
+.about-quote {
+  background: var(--gold);
+  padding: 4rem 3.5rem;
+  text-align: center;
+}
+
+.about-quote blockquote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2.6vw, 2rem);
+  color: var(--dark);
+  line-height: 1.55;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.about-quote cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(24,21,16,0.45);
+  margin-top: 1.4rem;
+  font-weight: 600;
+}

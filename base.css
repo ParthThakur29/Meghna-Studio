@@ -1,0 +1,245 @@
+/* 
+  base.css
+  Common styles used across all pages
+  -- navbar, footer, buttons, cursor, fonts, reset
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gold:      #c8a26a;
+  --gold-lt:   #e5d0a8;
+  --gold-dk:   #8b6830;
+  --dark:      #181510;
+  --dark2:     #2a2520;
+  --cream:     #faf6ef;
+  --off-white: #f4efe4;
+  --muted:     #7d7567;
+  --serif:     'Playfair Display', Georgia, serif;
+  --sans:      'Raleway', sans-serif;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--sans);
+}
+
+/* cursor dot */
+#dot {
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* navbar */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  height: 66px;
+  transition: background 0.4s, border-color 0.4s;
+  border-bottom: 1px solid transparent;
+}
+
+.nav.dark {
+  background: rgba(24, 21, 16, 0.95);
+  border-color: rgba(200, 162, 106, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.nav-logo {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 20px;
+  color: #fff;
+  line-height: 1;
+}
+
+.nav-logo span {
+  display: block;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2px;
+}
+
+.nav-links a {
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgba(255,255,255,0.4);
+  padding: 8px 16px;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 16px;
+  right: 16px;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s ease;
+}
+
+.nav-links a:hover {
+  color: rgba(255,255,255,0.75);
+}
+
+.nav-links a.here {
+  color: var(--gold-lt);
+}
+
+.nav-links a.here::after {
+  transform: scaleX(1);
+}
+
+/* buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 38px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-solid {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.btn-solid:hover {
+  background: var(--gold-lt);
+  box-shadow: 0 8px 24px rgba(200,162,106,0.28);
+}
+
+.btn-border {
+  background: transparent;
+  color: rgba(255,255,255,0.55);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-border:hover {
+  border-color: var(--gold);
+  color: var(--gold-lt);
+}
+
+/* small label above headings */
+.label {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* site footer */
+footer {
+  background: var(--dark2);
+  border-top: 1px solid rgba(200,162,106,0.1);
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .logo {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: rgba(255,255,255,0.35);
+}
+
+footer .links {
+  display: flex;
+  gap: 20px;
+}
+
+footer .links a {
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.22);
+  transition: color 0.2s;
+}
+
+footer .links a:hover {
+  color: var(--gold);
+}
+
+footer .copy {
+  font-size: 10.5px;
+  color: rgba(255,255,255,0.18);
+  letter-spacing: 0.06em;
+}
+
+/* page top padding (below fixed nav) */
+.wrap {
+  padding-top: 66px;
+}
